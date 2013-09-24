@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @turn.game_id %>
+</p>
+
+<p>
+  <strong>Match:</strong>
+  <%= @turn.match_id %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @turn.player_id %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @turn.group_id %>
+</p>
+
+<p>
+  <strong>Running time:</strong>
+  <%= @turn.running_time %>
+</p>
+
+<p>
+  <strong>Date finished:</strong>
+  <%= @turn.date_finished %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @turn.score %>
+</p>
+
+<p>
+  <strong>Delta:</strong>
+  <%= @turn.delta %>
+</p>
+
+<p>
+  <strong>Metadata:</strong>
+  <%= @turn.metadata %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @turn.is_active %>
+</p>
+
+<%= link_to 'Edit', edit_turn_path(@turn) %> |
+<%= link_to 'Back', turns_path %>

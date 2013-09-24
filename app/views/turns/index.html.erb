@@ -1,0 +1,45 @@
+<h1>Listing turns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Match</th>
+      <th>Player</th>
+      <th>Group</th>
+      <th>Running time</th>
+      <th>Date finished</th>
+      <th>Score</th>
+      <th>Delta</th>
+      <th>Metadata</th>
+      <th>Is active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turns.each do |turn| %>
+      <tr>
+        <td><%= turn.game_id %></td>
+        <td><%= turn.match_id %></td>
+        <td><%= turn.player_id %></td>
+        <td><%= turn.group_id %></td>
+        <td><%= turn.running_time %></td>
+        <td><%= turn.date_finished %></td>
+        <td><%= turn.score %></td>
+        <td><%= turn.delta %></td>
+        <td><%= turn.metadata %></td>
+        <td><%= turn.is_active %></td>
+        <td><%= link_to 'Show', turn %></td>
+        <td><%= link_to 'Edit', edit_turn_path(turn) %></td>
+        <td><%= link_to 'Destroy', turn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Turn', new_turn_path %>

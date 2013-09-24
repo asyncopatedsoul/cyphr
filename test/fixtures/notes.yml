@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  author_id: 1
+  type_id: 1
+  text: MyText
+  turn_id: 1
+  player_id: 1
+  match_id: 1
+  game_id: 1
+  privacy: 1
+
+two:
+  author_id: 1
+  type_id: 1
+  text: MyText
+  turn_id: 1
+  player_id: 1
+  match_id: 1
+  game_id: 1
+  privacy: 1

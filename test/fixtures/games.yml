@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  nickname: MyString
+  rules: MyString
+  parent_id: 1
+  creator_id: 1
+  description: MyText
+
+two:
+  name: MyString
+  nickname: MyString
+  rules: MyString
+  parent_id: 1
+  creator_id: 1
+  description: MyText

@@ -1,0 +1,49 @@
+<h1>Listing players</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Nickname</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Location</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Avatar url</th>
+      <th>Fb uid</th>
+      <th>Fb token</th>
+      <th>Short bio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.first_name %></td>
+        <td><%= player.last_name %></td>
+        <td><%= player.nickname %></td>
+        <td><%= player.email %></td>
+        <td><%= player.password %></td>
+        <td><%= player.location_id %></td>
+        <td><%= player.latitude %></td>
+        <td><%= player.longitude %></td>
+        <td><%= player.avatar_url %></td>
+        <td><%= player.fb_uid %></td>
+        <td><%= player.fb_token %></td>
+        <td><%= player.short_bio %></td>
+        <td><%= link_to 'Show', player %></td>
+        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Player', new_player_path %>

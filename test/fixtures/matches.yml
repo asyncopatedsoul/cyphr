@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  game_id: 1
+  date_finished: 2013-09-22 12:08:20
+  is_active: false
+  running_time: 2013-09-22 12:08:20
+  turn_count: 1
+  location_id: 1
+  winner_player_id: 1
+  winner_group_id: 1
+
+two:
+  game_id: 1
+  date_finished: 2013-09-22 12:08:20
+  is_active: false
+  running_time: 2013-09-22 12:08:20
+  turn_count: 1
+  location_id: 1
+  winner_player_id: 1
+  winner_group_id: 1

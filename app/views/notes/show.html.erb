@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @note.author_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @note.type_id %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @note.text %>
+</p>
+
+<p>
+  <strong>Turn:</strong>
+  <%= @note.turn_id %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @note.player_id %>
+</p>
+
+<p>
+  <strong>Match:</strong>
+  <%= @note.match_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @note.game_id %>
+</p>
+
+<p>
+  <strong>Privacy:</strong>
+  <%= @note.privacy %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

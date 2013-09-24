@@ -1,0 +1,41 @@
+<h1>Listing notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Type</th>
+      <th>Text</th>
+      <th>Turn</th>
+      <th>Player</th>
+      <th>Match</th>
+      <th>Game</th>
+      <th>Privacy</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.author_id %></td>
+        <td><%= note.type_id %></td>
+        <td><%= note.text %></td>
+        <td><%= note.turn_id %></td>
+        <td><%= note.player_id %></td>
+        <td><%= note.match_id %></td>
+        <td><%= note.game_id %></td>
+        <td><%= note.privacy %></td>
+        <td><%= link_to 'Show', note %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Note', new_note_path %>

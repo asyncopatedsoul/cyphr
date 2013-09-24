@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  nickname: MyString
+  latitude: 1
+  longitude: 1
+  radius: 1
+  address: MyText
+  parent_id: 1
+  type_id: 1
+  kml_url: MyString
+
+two:
+  name: MyString
+  nickname: MyString
+  latitude: 1
+  longitude: 1
+  radius: 1
+  address: MyText
+  parent_id: 1
+  type_id: 1
+  kml_url: MyString
