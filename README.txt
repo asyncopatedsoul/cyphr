@@ -33,11 +33,14 @@ player {
 rails generate scaffold Player first_name:string last_name:string nickname:string email:string password:string location_id:integer latitude:float longitude:float avatar_url:string
 
 //NICKNAMES
+name
 player_id
 creator_id
+pivacy
 game_id
 group_id
-name
+location_id
+
 
 
 //FAVORITES

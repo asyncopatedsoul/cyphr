@@ -1,0 +1,26 @@
+rails generate scaffold Player first_name:string last_name:string nickname:string email:string password:string location_id:integer latitude:float longitude:float avatar_url:string fb_uid:integer fb_token:string short_bio:text;
+
+rails generate scaffold Group name:string type_id:integer parent_id:integer description:text member_count:integer location_id:integer privacy:integer
+
+//players-groups
+
+rails generate scaffold Game name:string nickname:string rules:string parent_id:integer creator_id:integer description:text;
+
+rails generate scaffold Match game_id:integer date_finished:timestamp is_active:boolean running_time:time turn_count:integer location_id:integer winner_player_id:integer winner_group_id:integer;
+
+rails generate scaffold Turn game_id:integer match_id:integer player_id:integer group_id:integer running_time:time date_finished:timestamp score:integer delta:integer metadata:string is_active:boolean;
+
+rails generate scaffold Note author_id:integer type_id:integer text:text turn_id:integer player_id:integer match_id:integer game_id:integer privacy:integer;
+
+rails generate scaffold Location name:string nickname:string latitude:integer longitude:integer radius:integer address:text parent_id:integer type_id:integer kml_url:string;
+
+
+--
+
+Rating
+
+Favorite
+
+Nickname
+
+Levels
