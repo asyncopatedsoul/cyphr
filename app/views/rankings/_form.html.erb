@@ -1,0 +1,61 @@
+<%= form_for(@ranking) do |f| %>
+  <% if @ranking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ranking.errors.count, "error") %> prohibited this ranking from being saved:</h2>
+
+      <ul>
+      <% @ranking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player_id %><br>
+    <%= f.number_field :player_id %>
+  </div>
+  <div class="field">
+    <%= f.label :group_id %><br>
+    <%= f.number_field :group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :game_id %><br>
+    <%= f.number_field :game_id %>
+  </div>
+  <div class="field">
+    <%= f.label :game_metadata %><br>
+    <%= f.text_field :game_metadata %>
+  </div>
+  <div class="field">
+    <%= f.label :elo_score %><br>
+    <%= f.number_field :elo_score %>
+  </div>
+  <div class="field">
+    <%= f.label :match_count %><br>
+    <%= f.number_field :match_count %>
+  </div>
+  <div class="field">
+    <%= f.label :win_ratio %><br>
+    <%= f.text_field :win_ratio %>
+  </div>
+  <div class="field">
+    <%= f.label :win_count %><br>
+    <%= f.number_field :win_count %>
+  </div>
+  <div class="field">
+    <%= f.label :loss_count %><br>
+    <%= f.number_field :loss_count %>
+  </div>
+  <div class="field">
+    <%= f.label :match_id_list %><br>
+    <%= f.text_field :match_id_list %>
+  </div>
+  <div class="field">
+    <%= f.label :scope_group_id %><br>
+    <%= f.text_field :scope_group_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

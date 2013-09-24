@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130922203015) do
+ActiveRecord::Schema.define(version: 20130924210445) do
+
+  create_table "game_configurations", force: true do |t|
+    t.integer  "game_id"
+    t.integer  "match_id"
+    t.integer  "author_id"
+    t.string   "metadata"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "games", force: true do |t|
     t.string   "name"
@@ -52,13 +62,17 @@ ActiveRecord::Schema.define(version: 20130922203015) do
 
   create_table "matches", force: true do |t|
     t.integer  "game_id"
+    t.datetime "date_started"
     t.datetime "date_finished"
-    t.boolean  "is_active"
+    t.integer  "status_id"
     t.time     "running_time"
     t.integer  "turn_count"
     t.integer  "location_id"
-    t.integer  "winner_player_id"
-    t.integer  "winner_group_id"
+    t.integer  "zone_id"
+    t.integer  "final_player_id"
+    t.string   "player_id_list"
+    t.string   "score_list"
+    t.boolean  "is_valid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -86,9 +100,30 @@ ActiveRecord::Schema.define(version: 20130922203015) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "avatar_url"
-    t.integer  "fb_uid"
-    t.string   "fb_token"
+    t.integer  "facebook_uid"
+    t.string   "facebook_token"
     t.text     "short_bio"
+    t.integer  "gender"
+    t.date     "birthday"
+    t.string   "skype_name"
+    t.string   "twitter_token"
+    t.string   "twitter_token_secret"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rankings", force: true do |t|
+    t.integer  "player_id"
+    t.integer  "group_id"
+    t.integer  "game_id"
+    t.string   "game_metadata"
+    t.integer  "elo_score"
+    t.integer  "match_count"
+    t.decimal  "win_ratio"
+    t.integer  "win_count"
+    t.integer  "loss_count"
+    t.string   "match_id_list"
+    t.string   "scope_group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

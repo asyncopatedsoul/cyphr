@@ -46,18 +46,43 @@
 </p>
 
 <p>
-  <strong>Fb uid:</strong>
-  <%= @player.fb_uid %>
+  <strong>Facebook uid:</strong>
+  <%= @player.facebook_uid %>
 </p>
 
 <p>
-  <strong>Fb token:</strong>
-  <%= @player.fb_token %>
+  <strong>Facebook token:</strong>
+  <%= @player.facebook_token %>
 </p>
 
 <p>
   <strong>Short bio:</strong>
   <%= @player.short_bio %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @player.gender %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @player.birthday %>
+</p>
+
+<p>
+  <strong>Skype name:</strong>
+  <%= @player.skype_name %>
+</p>
+
+<p>
+  <strong>Twitter token:</strong>
+  <%= @player.twitter_token %>
+</p>
+
+<p>
+  <strong>Twitter token secret:</strong>
+  <%= @player.twitter_token_secret %>
 </p>
 
 <%= link_to 'Edit', edit_player_path(@player) %> |

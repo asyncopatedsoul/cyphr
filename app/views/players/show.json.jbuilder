@@ -1,1 +1,1 @@
-json.extract! @player, :first_name, :last_name, :nickname, :email, :password, :location_id, :latitude, :longitude, :avatar_url, :fb_uid, :fb_token, :short_bio, :created_at, :updated_at
+json.extract! @player, :first_name, :last_name, :nickname, :email, :password, :location_id, :latitude, :longitude, :avatar_url, :facebook_uid, :facebook_token, :short_bio, :gender, :birthday, :skype_name, :twitter_token, :twitter_token_secret, :created_at, :updated_at

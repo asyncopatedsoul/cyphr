@@ -1,5 +1,6 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
 
   # GET /matches
   # GET /matches.json
@@ -69,6 +70,6 @@ class MatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params
-      params.require(:match).permit(:game_id, :date_finished, :is_active, :running_time, :turn_count, :location_id, :winner_player_id, :winner_group_id)
+      params.require(:match).permit(:game_id, :date_started, :date_finished, :status_id, :running_time, :turn_count, :location_id, :zone_id, :final_player_id, :player_id_list, :score_list, :is_valid)
     end
 end

@@ -1,0 +1,47 @@
+<h1>Listing rankings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Group</th>
+      <th>Game</th>
+      <th>Game metadata</th>
+      <th>Elo score</th>
+      <th>Match count</th>
+      <th>Win ratio</th>
+      <th>Win count</th>
+      <th>Loss count</th>
+      <th>Match id list</th>
+      <th>Scope group</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rankings.each do |ranking| %>
+      <tr>
+        <td><%= ranking.player_id %></td>
+        <td><%= ranking.group_id %></td>
+        <td><%= ranking.game_id %></td>
+        <td><%= ranking.game_metadata %></td>
+        <td><%= ranking.elo_score %></td>
+        <td><%= ranking.match_count %></td>
+        <td><%= ranking.win_ratio %></td>
+        <td><%= ranking.win_count %></td>
+        <td><%= ranking.loss_count %></td>
+        <td><%= ranking.match_id_list %></td>
+        <td><%= ranking.scope_group_id %></td>
+        <td><%= link_to 'Show', ranking %></td>
+        <td><%= link_to 'Edit', edit_ranking_path(ranking) %></td>
+        <td><%= link_to 'Destroy', ranking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ranking', new_ranking_path %>

@@ -16,12 +16,16 @@
     <%= f.number_field :game_id %>
   </div>
   <div class="field">
+    <%= f.label :date_started %><br>
+    <%= f.datetime_select :date_started %>
+  </div>
+  <div class="field">
     <%= f.label :date_finished %><br>
     <%= f.datetime_select :date_finished %>
   </div>
   <div class="field">
-    <%= f.label :is_active %><br>
-    <%= f.check_box :is_active %>
+    <%= f.label :status_id %><br>
+    <%= f.number_field :status_id %>
   </div>
   <div class="field">
     <%= f.label :running_time %><br>
@@ -36,12 +40,24 @@
     <%= f.number_field :location_id %>
   </div>
   <div class="field">
-    <%= f.label :winner_player_id %><br>
-    <%= f.number_field :winner_player_id %>
+    <%= f.label :zone_id %><br>
+    <%= f.number_field :zone_id %>
   </div>
   <div class="field">
-    <%= f.label :winner_group_id %><br>
-    <%= f.number_field :winner_group_id %>
+    <%= f.label :final_player_id %><br>
+    <%= f.number_field :final_player_id %>
+  </div>
+  <div class="field">
+    <%= f.label :player_id_list %><br>
+    <%= f.text_field :player_id_list %>
+  </div>
+  <div class="field">
+    <%= f.label :score_list %><br>
+    <%= f.text_field :score_list %>
+  </div>
+  <div class="field">
+    <%= f.label :is_valid %><br>
+    <%= f.check_box :is_valid %>
   </div>
   <div class="actions">
     <%= f.submit %>

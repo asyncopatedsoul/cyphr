@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @ranking.player_id %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @ranking.group_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @ranking.game_id %>
+</p>
+
+<p>
+  <strong>Game metadata:</strong>
+  <%= @ranking.game_metadata %>
+</p>
+
+<p>
+  <strong>Elo score:</strong>
+  <%= @ranking.elo_score %>
+</p>
+
+<p>
+  <strong>Match count:</strong>
+  <%= @ranking.match_count %>
+</p>
+
+<p>
+  <strong>Win ratio:</strong>
+  <%= @ranking.win_ratio %>
+</p>
+
+<p>
+  <strong>Win count:</strong>
+  <%= @ranking.win_count %>
+</p>
+
+<p>
+  <strong>Loss count:</strong>
+  <%= @ranking.loss_count %>
+</p>
+
+<p>
+  <strong>Match id list:</strong>
+  <%= @ranking.match_id_list %>
+</p>
+
+<p>
+  <strong>Scope group:</strong>
+  <%= @ranking.scope_group_id %>
+</p>
+
+<%= link_to 'Edit', edit_ranking_path(@ranking) %> |
+<%= link_to 'Back', rankings_path %>

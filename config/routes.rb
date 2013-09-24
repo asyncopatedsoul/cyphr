@@ -1,13 +1,17 @@
 CyphrServer::Application.routes.draw do
+  resources :matches
+
   resources :players
+
+  resources :rankings
+
+  resources :game_configurations
 
   resources :locations
 
   resources :notes
 
   resources :turns
-
-  resources :matches
 
   resources :games
 

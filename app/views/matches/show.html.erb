@@ -6,13 +6,18 @@
 </p>
 
 <p>
+  <strong>Date started:</strong>
+  <%= @match.date_started %>
+</p>
+
+<p>
   <strong>Date finished:</strong>
   <%= @match.date_finished %>
 </p>
 
 <p>
-  <strong>Is active:</strong>
-  <%= @match.is_active %>
+  <strong>Status:</strong>
+  <%= @match.status_id %>
 </p>
 
 <p>
@@ -31,13 +36,28 @@
 </p>
 
 <p>
-  <strong>Winner player:</strong>
-  <%= @match.winner_player_id %>
+  <strong>Zone:</strong>
+  <%= @match.zone_id %>
 </p>
 
 <p>
-  <strong>Winner group:</strong>
-  <%= @match.winner_group_id %>
+  <strong>Final player:</strong>
+  <%= @match.final_player_id %>
+</p>
+
+<p>
+  <strong>Player id list:</strong>
+  <%= @match.player_id_list %>
+</p>
+
+<p>
+  <strong>Score list:</strong>
+  <%= @match.score_list %>
+</p>
+
+<p>
+  <strong>Is valid:</strong>
+  <%= @match.is_valid %>
 </p>
 
 <%= link_to 'Edit', edit_match_path(@match) %> |

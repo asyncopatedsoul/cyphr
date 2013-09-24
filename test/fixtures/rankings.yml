@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  player_id: 1
+  group_id: 1
+  game_id: 1
+  game_metadata: MyString
+  elo_score: 1
+  match_count: 1
+  win_ratio: 9.99
+  win_count: 1
+  loss_count: 1
+  match_id_list: MyString
+  scope_group_id: MyString
+
+two:
+  player_id: 1
+  group_id: 1
+  game_id: 1
+  game_metadata: MyString
+  elo_score: 1
+  match_count: 1
+  win_ratio: 9.99
+  win_count: 1
+  loss_count: 1
+  match_id_list: MyString
+  scope_group_id: MyString

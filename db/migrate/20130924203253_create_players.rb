@@ -10,9 +10,14 @@ class CreatePlayers < ActiveRecord::Migration
       t.float :latitude
       t.float :longitude
       t.string :avatar_url
-      t.integer :fb_uid
-      t.string :fb_token
+      t.integer :facebook_uid
+      t.string :facebook_token
       t.text :short_bio
+      t.integer :gender
+      t.date :birthday
+      t.string :skype_name
+      t.string :twitter_token
+      t.string :twitter_token_secret
 
       t.timestamps
     end

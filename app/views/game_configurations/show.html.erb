@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @game_configuration.game_id %>
+</p>
+
+<p>
+  <strong>Match:</strong>
+  <%= @game_configuration.match_id %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @game_configuration.author_id %>
+</p>
+
+<p>
+  <strong>Metadata:</strong>
+  <%= @game_configuration.metadata %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @game_configuration.title %>
+</p>
+
+<%= link_to 'Edit', edit_game_configuration_path(@game_configuration) %> |
+<%= link_to 'Back', game_configurations_path %>

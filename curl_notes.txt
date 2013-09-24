@@ -1,0 +1,17 @@
+curl -X POST -H "Content-Type: application/json" -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/ap
+
+
+{"scoring":[1],"teams":[{1,1}],"score_to_win":11,"service":2}
+
+{"scoring":[1],"teams":[{1,1}],"score_to_win":21,"service":5}
+
+{"scoring":[1],"teams":[{2,2}],"score_to_win":21,"service":5}
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"game_id":1,"date_started":null,"date_finished":null,"status_id":0,"running_time":null,"turn_count":0,"location_id":1,"zone_id":null,"final_player_id":null,"player_id_list":"1,2","score_list":"0,0","is_valid":true}' http://localhost:3000/matches/new
+
+curl -X POST -H "Content-Type: application/json" -d 'match[game_id]=1' -d 'match[date_started]=null' -d 'match[date_finished]=null' -d 'match[status_id]=0' -d 'match[running_time]=null' -d 'match[turn_count]=0' -d 'match[location_id]=1' -d 'match[zone_id]=null' -d 'match[final_player_id]=null' -d 'match[player_id_list]=1,2' -d 'match[score_list]=0,0' -d 'match[is_valid]=true' http://localhost:3000/matches
+
+curl -d 'match[game_id]=1' -d 'match[date_started]=null' -d 'match[date_finished]=null' -d 'match[status_id]=0' -d 'match[running_time]=null' -d 'match[turn_count]=0' -d 'match[location_id]=1' -d 'match[zone_id]=null' -d 'match[final_player_id]=null' -d 'match[player_id_list]=1' -d 'match[score_list]=0' -d 'match[is_valid]=true' -d 'authenticity_token=diXsGKIj3o3aHv2NqJS89t4a28xPB1bY2z2XK9VrUPU' http://localhost:3000/matches
+
+curl http://localhost:3000 --cookie-jar cookie | grep csrf

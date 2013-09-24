@@ -12,9 +12,14 @@
       <th>Latitude</th>
       <th>Longitude</th>
       <th>Avatar url</th>
-      <th>Fb uid</th>
-      <th>Fb token</th>
+      <th>Facebook uid</th>
+      <th>Facebook token</th>
       <th>Short bio</th>
+      <th>Gender</th>
+      <th>Birthday</th>
+      <th>Skype name</th>
+      <th>Twitter token</th>
+      <th>Twitter token secret</th>
       <th></th>
       <th></th>
       <th></th>
@@ -33,9 +38,14 @@
         <td><%= player.latitude %></td>
         <td><%= player.longitude %></td>
         <td><%= player.avatar_url %></td>
-        <td><%= player.fb_uid %></td>
-        <td><%= player.fb_token %></td>
+        <td><%= player.facebook_uid %></td>
+        <td><%= player.facebook_token %></td>
         <td><%= player.short_bio %></td>
+        <td><%= player.gender %></td>
+        <td><%= player.birthday %></td>
+        <td><%= player.skype_name %></td>
+        <td><%= player.twitter_token %></td>
+        <td><%= player.twitter_token_secret %></td>
         <td><%= link_to 'Show', player %></td>
         <td><%= link_to 'Edit', edit_player_path(player) %></td>
         <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>

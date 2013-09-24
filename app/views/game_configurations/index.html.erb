@@ -1,0 +1,35 @@
+<h1>Listing game_configurations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Match</th>
+      <th>Author</th>
+      <th>Metadata</th>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @game_configurations.each do |game_configuration| %>
+      <tr>
+        <td><%= game_configuration.game_id %></td>
+        <td><%= game_configuration.match_id %></td>
+        <td><%= game_configuration.author_id %></td>
+        <td><%= game_configuration.metadata %></td>
+        <td><%= game_configuration.title %></td>
+        <td><%= link_to 'Show', game_configuration %></td>
+        <td><%= link_to 'Edit', edit_game_configuration_path(game_configuration) %></td>
+        <td><%= link_to 'Destroy', game_configuration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game configuration', new_game_configuration_path %>

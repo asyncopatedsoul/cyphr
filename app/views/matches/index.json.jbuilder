@@ -1,4 +1,4 @@
 json.array!(@matches) do |match|
-  json.extract! match, :game_id, :date_finished, :is_active, :running_time, :turn_count, :location_id, :winner_player_id, :winner_group_id
+  json.extract! match, :game_id, :date_started, :date_finished, :status_id, :running_time, :turn_count, :location_id, :zone_id, :final_player_id, :player_id_list, :score_list, :is_valid
   json.url match_url(match, format: :json)
 end

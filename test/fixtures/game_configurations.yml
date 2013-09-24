@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  game_id: 1
+  match_id: 1
+  author_id: 1
+  metadata: MyString
+  title: MyString
+
+two:
+  game_id: 1
+  match_id: 1
+  author_id: 1
+  metadata: MyString
+  title: MyString

@@ -10,9 +10,14 @@ one:
   latitude: 1.5
   longitude: 1.5
   avatar_url: MyString
-  fb_uid: 1
-  fb_token: MyString
+  facebook_uid: 1
+  facebook_token: MyString
   short_bio: MyText
+  gender: 1
+  birthday: 2013-09-24
+  skype_name: MyString
+  twitter_token: MyString
+  twitter_token_secret: MyString
 
 two:
   first_name: MyString
@@ -24,6 +29,11 @@ two:
   latitude: 1.5
   longitude: 1.5
   avatar_url: MyString
-  fb_uid: 1
-  fb_token: MyString
+  facebook_uid: 1
+  facebook_token: MyString
   short_bio: MyText
+  gender: 1
+  birthday: 2013-09-24
+  skype_name: MyString
+  twitter_token: MyString
+  twitter_token_secret: MyString

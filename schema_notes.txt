@@ -1,0 +1,142 @@
+//Who is a fitting challenge to play X game?
+
+rails generate scaffold MatchReportSingle 
+
+final_player_id
+match_id
+game_id
+player_id_list
+score_list
+end_condition_id  //forfeit, cancel, win, tie
+is_valid          
+//to 'delete' match from visible history and ignore for ranking/ELO scoring
+
+
+
+rails generate scaffold MatchReportGroup
+
+
+
+
+
+
+
+//activity feed
+
+rails generate scaffold Story 
+
+player_id
+match_id
+group_id
+location_id
+text
+zone_id
+
+
+
+
+//map images/animations to a player's state: 
+
+rails generate scaffold playerStateAssets 
+player_id
+group_id
+state_id        // neutral taunt hit won lost
+asset_type_id   // image, animation, sound effect, BG track, video
+
+
+//
+// invite to match
+// invite to group
+
+rails generate scaffold Invitation 
+
+
+
+
+//
+
+rails generate scaffold MatchQueue
+
+player_id
+
+
+
+//index for all game boards, courts, tables
+
+rails generate scaffold MatchZone
+
+location_id
+game_id
+nickname
+description
+object_id     //reference exact equipment (i.e. SKU for table)
+
+
+
+//matches played all count towards global ELO of a game
+//matches played also count towards ELO within scope of a group (i.e. ping pong player at Scopely) 
+rails generate scaffold GlobalRanking
+
+player_id
+group_id
+game_id
+match_count
+win_ratio
+win_count
+loss_count
+match_id_list
+scope_group_id
+
+
+//decouple win:loss from elo scoring
+
+rails generate scaffold EloRanking
+
+golbal_ranking_id
+elo
+
+
+
+//for variants of a game
+//(i.e. Ping Pong to 21 with 5 serves or Ping Pong to 11 with 2 serves) 
+
+rails generate GameConfiguration
+
+game_id
+title
+description
+metadata
+
+/*
+http://en.wikipedia.org/wiki/Elo_rating_system
+
+
+Performance Rating is a hypothetical rating that would result from the games of a single event only. Some chess organizations use the "algorithm of 400" to calculate performance rating. According to this algorithm, performance rating for an event is calculated by taking (1) the rating of each player beaten and adding 400, (2) the rating of each player lost to and subtracting 400, (3) the rating of each player drawn, and (4) summing these figures and dividing by the number of games played.
+Example: 2 Wins, 2 Losses
+(w+400 + x+400 + y-400 + z-400)/4
+[w+x+y+z+400(2)-400(2)]/4
+This can be expressed by the following formula: Performance rating = [((Total of opponents' ratings) + 400 * (Wins - Losses)) / Games].
+Example: If you beat a player with an elo rating of 1000,
+Performance rating = (1000 + 400*1)/1 = 1400
+If you beat two players with elo ratings of 1000,
+Performance rating = (2000 + 400*2)/2 = 1400
+If you draw,
+Performance rating = (1000 + 400*0)/1 = 1000
+This is a simplification, because it doesn't take account of K-factors (this factor is explained further below), but it offers an easy way to get an estimate of PR (Performance Rating).
+
+
+The K-factor used by the USCF[edit source | editbeta]
+The K-factor, in the USCF rating system, can be estimated by dividing 800 by the effective number of games a player's rating is based on (Ne) plus the number of games the player completed in a tournament (m).[11]
+K = 800 / (N_e + m)\, 
+
+*/
+
+//how to calculate ELO
+
+//from MatchReport
+
+  //if win
+
+
+  //if tie
+

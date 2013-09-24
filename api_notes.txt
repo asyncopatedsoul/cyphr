@@ -1,0 +1,34 @@
+API Documentation
+
+
+- sign in 
+
+
+- get all groups
+
+- get all players
+
+
+- get all games
+
+- get all game variants for a game
+
+
+
+- create match
+
+- send invitation
+
+- accept invitation
+
+
+- send turn
+
+- pause match
+
+- end and report match 
+
+
+> calculate ELO
+
+- get activity feed
