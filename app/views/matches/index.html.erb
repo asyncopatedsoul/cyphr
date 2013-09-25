@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Game</th>
+      <th>Game config</th>
       <th>Date started</th>
       <th>Date finished</th>
       <th>Status</th>
@@ -12,8 +13,10 @@
       <th>Location</th>
       <th>Zone</th>
       <th>Final player</th>
+      <th>Group id list</th>
       <th>Player id list</th>
       <th>Score list</th>
+      <th>Group scope list</th>
       <th>Is valid</th>
       <th></th>
       <th></th>
@@ -25,6 +28,7 @@
     <% @matches.each do |match| %>
       <tr>
         <td><%= match.game_id %></td>
+        <td><%= match.game_config_id %></td>
         <td><%= match.date_started %></td>
         <td><%= match.date_finished %></td>
         <td><%= match.status_id %></td>
@@ -33,8 +37,10 @@
         <td><%= match.location_id %></td>
         <td><%= match.zone_id %></td>
         <td><%= match.final_player_id %></td>
+        <td><%= match.group_id_list %></td>
         <td><%= match.player_id_list %></td>
         <td><%= match.score_list %></td>
+        <td><%= match.group_scope_list %></td>
         <td><%= match.is_valid %></td>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>

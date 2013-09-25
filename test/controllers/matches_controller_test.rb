@@ -18,7 +18,7 @@ class MatchesControllerTest < ActionController::TestCase
 
   test "should create match" do
     assert_difference('Match.count') do
-      post :create, match: { date_finished: @match.date_finished, date_started: @match.date_started, final_player_id: @match.final_player_id, game_id: @match.game_id, is_valid: @match.is_valid, location_id: @match.location_id, player_id_list: @match.player_id_list, running_time: @match.running_time, score_list: @match.score_list, status_id: @match.status_id, turn_count: @match.turn_count, zone_id: @match.zone_id }
+      post :create, match: { date_finished: @match.date_finished, date_started: @match.date_started, final_player_id: @match.final_player_id, game_config_id: @match.game_config_id, game_id: @match.game_id, group_id_list: @match.group_id_list, group_scope_list: @match.group_scope_list, is_valid: @match.is_valid, location_id: @match.location_id, player_id_list: @match.player_id_list, running_time: @match.running_time, score_list: @match.score_list, status_id: @match.status_id, turn_count: @match.turn_count, zone_id: @match.zone_id }
     end
 
     assert_redirected_to match_path(assigns(:match))
@@ -35,7 +35,7 @@ class MatchesControllerTest < ActionController::TestCase
   end
 
   test "should update match" do
-    patch :update, id: @match, match: { date_finished: @match.date_finished, date_started: @match.date_started, final_player_id: @match.final_player_id, game_id: @match.game_id, is_valid: @match.is_valid, location_id: @match.location_id, player_id_list: @match.player_id_list, running_time: @match.running_time, score_list: @match.score_list, status_id: @match.status_id, turn_count: @match.turn_count, zone_id: @match.zone_id }
+    patch :update, id: @match, match: { date_finished: @match.date_finished, date_started: @match.date_started, final_player_id: @match.final_player_id, game_config_id: @match.game_config_id, game_id: @match.game_id, group_id_list: @match.group_id_list, group_scope_list: @match.group_scope_list, is_valid: @match.is_valid, location_id: @match.location_id, player_id_list: @match.player_id_list, running_time: @match.running_time, score_list: @match.score_list, status_id: @match.status_id, turn_count: @match.turn_count, zone_id: @match.zone_id }
     assert_redirected_to match_path(assigns(:match))
   end
 

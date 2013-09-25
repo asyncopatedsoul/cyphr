@@ -16,6 +16,10 @@
     <%= f.number_field :game_id %>
   </div>
   <div class="field">
+    <%= f.label :game_config_id %><br>
+    <%= f.number_field :game_config_id %>
+  </div>
+  <div class="field">
     <%= f.label :date_started %><br>
     <%= f.datetime_select :date_started %>
   </div>
@@ -48,12 +52,20 @@
     <%= f.number_field :final_player_id %>
   </div>
   <div class="field">
+    <%= f.label :group_id_list %><br>
+    <%= f.text_field :group_id_list %>
+  </div>
+  <div class="field">
     <%= f.label :player_id_list %><br>
     <%= f.text_field :player_id_list %>
   </div>
   <div class="field">
     <%= f.label :score_list %><br>
     <%= f.text_field :score_list %>
+  </div>
+  <div class="field">
+    <%= f.label :group_scope_list %><br>
+    <%= f.text_field :group_scope_list %>
   </div>
   <div class="field">
     <%= f.label :is_valid %><br>

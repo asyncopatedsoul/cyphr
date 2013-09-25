@@ -1,3 +1,7 @@
+
+skip_before_filter :verify_authenticity_token
+
+
 rails generate scaffold Player first_name:string last_name:string nickname:string email:string password:string location_id:integer latitude:float longitude:float avatar_url:string facebook_uid:integer facebook_token:string short_bio:text gender:integer birthday:date skype_name:string twitter_token:string twitter_token_secret:string;
 
 rails generate scaffold Group name:string type_id:integer parent_id:integer description:text member_count:integer location_id:integer privacy:integer
@@ -8,7 +12,7 @@ rails generate scaffold Game name:string nickname:string rules:string parent_id:
 
 rails generate scaffold GameConfiguration game_id:integer match_id:integer author_id:integer metadata:string title:string
 
-rails generate scaffold Match game_id:integer date_started:timestamp date_finished:timestamp status_id:integer running_time:time turn_count:integer location_id:integer zone_id:integer final_player_id:integer player_id_list:string score_list:string is_valid:boolean
+rails generate scaffold Match game_id:integer game_config_id:integer date_started:timestamp date_finished:timestamp status_id:integer running_time:time turn_count:integer location_id:integer zone_id:integer final_player_id:integer group_id_list:string player_id_list:string score_list:string group_scope_list:string is_valid:boolean
 
 rails generate scaffold Turn game_id:integer match_id:integer player_id:integer group_id:integer running_time:time date_finished:timestamp score:integer delta:integer metadata:string is_active:boolean;
 

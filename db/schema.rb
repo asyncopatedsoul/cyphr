@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130924210445) do
+ActiveRecord::Schema.define(version: 20130925051811) do
 
   create_table "game_configurations", force: true do |t|
     t.integer  "game_id"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20130924210445) do
 
   create_table "matches", force: true do |t|
     t.integer  "game_id"
+    t.integer  "game_config_id"
     t.datetime "date_started"
     t.datetime "date_finished"
     t.integer  "status_id"
@@ -70,8 +71,10 @@ ActiveRecord::Schema.define(version: 20130924210445) do
     t.integer  "location_id"
     t.integer  "zone_id"
     t.integer  "final_player_id"
+    t.string   "group_id_list"
     t.string   "player_id_list"
     t.string   "score_list"
+    t.string   "group_scope_list"
     t.boolean  "is_valid"
     t.datetime "created_at"
     t.datetime "updated_at"

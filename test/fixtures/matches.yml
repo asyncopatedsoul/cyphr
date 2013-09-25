@@ -2,28 +2,34 @@
 
 one:
   game_id: 1
-  date_started: 2013-09-24 14:04:45
-  date_finished: 2013-09-24 14:04:45
+  game_config_id: 1
+  date_started: 2013-09-24 22:18:11
+  date_finished: 2013-09-24 22:18:11
   status_id: 1
-  running_time: 2013-09-24 14:04:45
+  running_time: 2013-09-24 22:18:11
   turn_count: 1
   location_id: 1
   zone_id: 1
   final_player_id: 1
+  group_id_list: MyString
   player_id_list: MyString
   score_list: MyString
+  group_scope_list: MyString
   is_valid: false
 
 two:
   game_id: 1
-  date_started: 2013-09-24 14:04:45
-  date_finished: 2013-09-24 14:04:45
+  game_config_id: 1
+  date_started: 2013-09-24 22:18:11
+  date_finished: 2013-09-24 22:18:11
   status_id: 1
-  running_time: 2013-09-24 14:04:45
+  running_time: 2013-09-24 22:18:11
   turn_count: 1
   location_id: 1
   zone_id: 1
   final_player_id: 1
+  group_id_list: MyString
   player_id_list: MyString
   score_list: MyString
+  group_scope_list: MyString
   is_valid: false

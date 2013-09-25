@@ -3548,3 +3548,922 @@ Processing by MatchesController#show as JSON
   [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT 1[0m  [["id", "1"]]
   Rendered matches/show.json.jbuilder (3.3ms)
 Completed 200 OK in 36ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-24 22:10:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 44ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+Processing by MatchesController#index as HTML
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches"
+  Rendered matches/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 130ms (Views: 127.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:10:25 -0700
+  [1m[36m (8.1ms)[0m  [1mDROP TABLE "matches"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMatches (20130925051811)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "game_config_id" integer, "date_started" datetime, "date_finished" datetime, "status_id" integer, "running_time" time, "turn_count" integer, "location_id" integer, "zone_id" integer, "final_player_id" integer, "group_id_list" varchar(255), "player_id_list" varchar(255), "score_list" varchar(255), "group_scope_list" varchar(255), "is_valid" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130925051811"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/matches" for 127.0.0.1 at 2013-09-24 22:19:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MatchesController#index as HTML
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches"
+  Rendered matches/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 105ms (Views: 84.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:19:47 -0700
+
+
+Started POST "/matches" for 127.0.0.1 at 2013-09-24 22:21:35 -0700
+Processing by MatchesController#create as */*
+  Parameters: {"match"=>{"game_id"=>"1", "date_started"=>"null", "date_finished"=>"null", "status_id"=>"0", "running_time"=>"null", "turn_count"=>"0", "location_id"=>"1", "zone_id"=>"null", "final_player_id"=>"null", "player_id_list"=>"1,2", "score_list"=>"0,0", "is_valid"=>"true"}, "group_scope_list"=>"0"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "matches" ("created_at", "final_player_id", "game_id", "is_valid", "location_id", "player_id_list", "score_list", "status_id", "turn_count", "updated_at", "zone_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 25 Sep 2013 05:21:35 UTC +00:00], ["final_player_id", 0], ["game_id", 1], ["is_valid", true], ["location_id", 1], ["player_id_list", "1,2"], ["score_list", "0,0"], ["status_id", 0], ["turn_count", 0], ["updated_at", Wed, 25 Sep 2013 05:21:35 UTC +00:00], ["zone_id", 0]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/matches/1
+Completed 302 Found in 55ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+Processing by MatchesController#index as HTML
+  [1m[35mMatch Load (0.2ms)[0m  SELECT "matches".* FROM "matches"
+  Rendered matches/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:21:42 -0700
+
+
+Started GET "/matches.json" for 127.0.0.1 at 2013-09-24 22:22:14 -0700
+Processing by MatchesController#index as JSON
+  [1m[36mMatch Load (0.2ms)[0m  [1mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.json.jbuilder (21.0ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/turns" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+Processing by TurnsController#index as HTML
+  [1m[35mTurn Load (0.1ms)[0m  SELECT "turns".* FROM "turns"
+  Rendered turns/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:24:03 -0700
+
+
+Started POST "/turns/new" for 127.0.0.1 at 2013-09-24 22:35:00 -0700
+
+ActionController::RoutingError (No route matches [POST] "/turns/new"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.9ms)
+
+
+Started POST "/turns/" for 127.0.0.1 at 2013-09-24 22:35:50 -0700
+Processing by TurnsController#create as */*
+  Parameters: {"{ turn: { game_id:1, match_id:1, player_id:1 group_id:null running_time:30, date_finished:null, score:1, delta:1, metadata:\"ace\", is_active:false }}"=>nil}
+Completed 400 Bad Request in 0ms
+
+ActionController::ParameterMissing (param not found: turn):
+  app/controllers/turns_controller.rb:72:in `turn_params'
+  app/controllers/turns_controller.rb:27:in `create'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started POST "/turns" for 127.0.0.1 at 2013-09-24 22:38:27 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ turn: { "game_id":1, "match_id":1, "player_id":1 "group_id":null "running_time":30, "date_finished":null, "score":1, "delta":1, "metadata":"ace", "is_active":false }}'):
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2646600567263058170__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started POST "/turns" for 127.0.0.1 at 2013-09-24 22:38:52 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ "turn": { "game_id":1, "match_id":1, "player_id":1 "group_id":null "running_time":30, "date_finished":null, "score":1, "delta":1, "metadata":"ace", "is_active":false }}'):
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2646600567263058170__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/Documents/rails_one_click/ruby/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.7ms)
+
+
+Started POST "/turns" for 127.0.0.1 at 2013-09-24 22:40:40 -0700
+Processing by TurnsController#create as */*
+  Parameters: {"turn"=>{"game_id"=>1, "match_id"=>1, "player_id"=>1, "group_id"=>nil, "running_time"=>30, "date_finished"=>nil, "score"=>1, "delta"=>1, "metadata"=>"ace", "is_active"=>false}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "turns" ("created_at", "delta", "game_id", "is_active", "match_id", "metadata", "player_id", "running_time", "score", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 25 Sep 2013 05:40:40 UTC +00:00], ["delta", 1], ["game_id", 1], ["is_active", false], ["match_id", 1], ["metadata", "ace"], ["player_id", 1], ["running_time", 30], ["score", 1], ["updated_at", Wed, 25 Sep 2013 05:40:40 UTC +00:00]]
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/turns/1
+Completed 302 Found in 28ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/turns" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+Processing by TurnsController#index as HTML
+  [1m[35mTurn Load (0.1ms)[0m  SELECT "turns".* FROM "turns"
+  Rendered turns/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:03 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:41:04 -0700
+
+
+Started GET "/game_configurations" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+Processing by GameConfigurationsController#index as HTML
+  [1m[36mGameConfiguration Load (0.1ms)[0m  [1mSELECT "game_configurations".* FROM "game_configurations"[0m
+  Rendered game_configurations/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:11 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:12 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:12 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:49:12 -0700
+
+
+Started GET "/matches" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+Processing by MatchesController#index as HTML
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches"
+  Rendered matches/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:50:41 -0700
+
+
+Started POST "/matches" for 127.0.0.1 at 2013-09-24 22:51:11 -0700
+Processing by MatchesController#create as */*
+  Parameters: {"match"=>{"game_id"=>1, "date_started"=>nil, "date_finished"=>nil, "status_id"=>0, "running_time"=>nil, "turn_count"=>0, "location_id"=>1, "zone_id"=>nil, "final_player_id"=>nil, "player_id_list"=>"1,2", "score_list"=>"0,0", "is_valid"=>true, "group_scope_list"=>0}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "matches" ("created_at", "game_id", "group_scope_list", "is_valid", "location_id", "player_id_list", "score_list", "status_id", "turn_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 25 Sep 2013 05:51:11 UTC +00:00], ["game_id", 1], ["group_scope_list", 0], ["is_valid", true], ["location_id", 1], ["player_id_list", "1,2"], ["score_list", "0,0"], ["status_id", 0], ["turn_count", 0], ["updated_at", Wed, 25 Sep 2013 05:51:11 UTC +00:00]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/matches/2
+Completed 302 Found in 11ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+Processing by MatchesController#index as HTML
+  [1m[35mMatch Load (0.2ms)[0m  SELECT "matches".* FROM "matches"
+  Rendered matches/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:51:14 -0700
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.1ms)[0m  [1mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-24 22:52:16 -0700
