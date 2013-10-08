@@ -4647,3 +4647,89 @@ Processing by GamesController#index as HTML
   [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games"[0m
   Rendered games/index.html.erb within layouts/application (6.4ms)
 Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-07 22:08:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/dodeca/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 38ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-07 22:14:58 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 595ms (Views: 567.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/matches.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/turns.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/matches.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/rankings.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/turns.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-07 22:14:59 -0700
